@@ -57,7 +57,6 @@ public class WebDriverHelper {
                     break;
                 case CHROME:
                     //System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderHelper.getInstance().getConfigFileHelper().getDriverPath());
-                    //System.setProperty("webdriver.chrome.driver", FileReaderHelper.getInstance().getConfigFileHelper().getDriverPath());
                     //driver = new ChromeDriver();
                     driver = launchChromeBrowser();
                     break;
@@ -74,13 +73,6 @@ public class WebDriverHelper {
             logger.info("Error occured while setting up WebDriver");
         }
 
-/*
-        driver.manage().timeouts().implicitlyWait(FileReaderHelper.getInstance().getConfigFileHelper().getImplicitlyWait(), TimeUnit.SECONDS);
-        if(FileReaderHelper.getInstance().getConfigFileHelper().getBrowserWindowSize()){
-            driver.manage().window().maximize();
-        }
-*/
-        //driver.get(FileReaderHelper.getInstance().getConfigFileHelper().getApplicationUrl());
         return driver;
     }
 

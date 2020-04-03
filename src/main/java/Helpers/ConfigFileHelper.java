@@ -32,9 +32,13 @@ public class ConfigFileHelper {
     }
 
     public String getDriverPath(){
-        String driverPath = properties.getProperty("driverPath");
-        if(driverPath!= null) return driverPath;
-        else throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
+        System.out.println("user.dir:"+System.getProperty("user.dir"));
+        String driverPath = System.getProperty("user.dir") + properties.getProperty("driverPath");
+        if(driverPath!= null) {
+            return driverPath;
+        } else {
+            throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
+        }
     }
 
     public long getImplicitlyWait() {
@@ -88,7 +92,7 @@ public class ConfigFileHelper {
     }
 
     public String getDomainDataResourcePath() {
-        String domainDataResourcePath = properties.getProperty("domainDataResourcePath");
+        String domainDataResourcePath = System.getProperty("user.dir") + properties.getProperty("domainDataResourcePath");
         if (domainDataResourcePath != null) {
             return domainDataResourcePath;
         } else {
@@ -97,7 +101,7 @@ public class ConfigFileHelper {
     }
 
     public String getScreenshotPath() {
-        String screenshotPath = properties.getProperty("ScreenshotPath");
+        String screenshotPath = System.getProperty("user.dir") + properties.getProperty("ScreenshotPath");
         if(screenshotPath != null) {
             return screenshotPath;
         } else {
