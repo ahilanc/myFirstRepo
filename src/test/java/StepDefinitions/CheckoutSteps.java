@@ -23,11 +23,12 @@ public class CheckoutSteps implements En {
 
         And("^I proceed to checkout from Cart$", () -> {
             try {
-                Thread.sleep(4000);
+                waitFor(7000);
                 driver = getLatestDriver();
                 driver.switchTo().frame(0);
+                fluentWait(checkoutObjects.addCartButton);
                 checkoutObjects.addCartButton.click();
-                Thread.sleep(4000);
+                waitFor(4000);
                 Assert.assertTrue(checkoutObjects.productTextMessage.isDisplayed());
                 attachScreenshot();
                 checkoutObjects.proceedToCheckOutButton.click();

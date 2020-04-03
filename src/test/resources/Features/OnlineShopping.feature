@@ -26,4 +26,4 @@ Feature: Demo - Online Shopping Site
 
     Examples:
     | firstName | successMessage                                          |
-    | Ahilan    | Your personal information has been successfully updated |
+    | AhilanC   | Your personal information has been successfully updated |
