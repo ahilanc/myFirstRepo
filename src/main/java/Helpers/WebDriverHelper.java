@@ -4,6 +4,9 @@ import Enums.DriverType;
 import Enums.EnvironmentType;
 
 import listeners.poBaseClass;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,14 +15,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+
 
 public class WebDriverHelper {
     private WebDriver driver;
     private static DriverType driverType;
     private static EnvironmentType environmentType;
     private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
-    public static Logger logger = Logger.getLogger("Inside helpers package " + WebDriverHelper.class.getName().toUpperCase());
+    public static Logger logger = LogManager.getLogger("Inside helpers package " + WebDriverHelper.class.getName().toUpperCase());
 
     public WebDriverHelper() {
         driverType = FileReaderHelper.getInstance().getConfigFileHelper().getBrowser();

@@ -14,11 +14,12 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class utilLibrary {
     public static WebDriver gDriver;
-    public static Logger logger = Logger.getLogger("Inside helper Class " + utilLibrary.class.getName().toUpperCase());
+    public static Logger logger = LogManager.getLogger("Inside helper Class " + utilLibrary.class.getName().toUpperCase());
 
     public static void openUrl(String URL) {
         WebDriver webDriver = poBaseClass.poGetDriver();

@@ -1,10 +1,13 @@
 package listeners;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
 
-import org.apache.log4j.*;
 
 public class Logging {
-    private static Logger Log = Logger.getLogger(Logging.class.getName());
+    private static Logger Log = LogManager.getLogger(Logging.class.getName());
     private String logLevel;
 
     public static void info(String message) {
@@ -51,9 +54,10 @@ public class Logging {
     }
 
     //logging starts
-    public void startLog(String testClassName) {
+    public void startLog(String testClassName){
         logLevel = "info";
-        Log.setLevel(setlogLevel());
+        Configurator.setRootLevel(setlogLevel());
+        //Log.setLevel(setlogLevel());
         Log.info(testClassName);
     }
 
