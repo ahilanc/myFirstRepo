@@ -35,20 +35,31 @@ $ git clone https://github.com/ahilanc/myFirstRepo.git
 Set up the Framework: Open IntelliJ and Import the Framework as Maven project.
 
 •	Open IntelliJ IDEA and close any existing project.
-•	From the Welcome screen, click Import Project
+
+•	From the Welcome screen, click Import Project.
+
 •	In View Menu - > Tool Windows -> Maven, Click on ‘Reimport all maven projects’
 
 How to run Cucumber tests using Parallel Test Runner:
 
 •	Press  ‘Add Configurations’ from the run/debug configuration dialog in Intellij IDEA
+
 •	In the Run/Debug Configuration Dialog, click ‘+’ button on the toolbar. Select the desired configuration type as ‘Junit’
+
 •	Select Cucumber Framework in Use classpath of module
+
 •	Select ‘JAR manifest’ in Shorten command line
-•	Check if SDK is not available in JRE, first go to Project Structure from File Menu and Select java 1.8 in Project SDK then select the   SDK in JRE from Run/Debug Configuration
+
+•	Check if SDK is not available in JRE, first go to Project Structure from File Menu and Select java 1.8 in Project SDK then select the SDK in JRE from Run/Debug Configuration
+
 •	Type “ParallelTestRunner” in class name and give same name in name
+
 •	Click on Ok button
+
 •	Run ‘ParallelTestRunner’ in Run Configuration
+
 •	Once tests are executed, folder path to see the report – ( output -> courgette report -> Index.html with using Chrome)
+
 •	Click on each scenario hyperlink to see the screenshots with execution status
 
 
