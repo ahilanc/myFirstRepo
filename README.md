@@ -9,12 +9,19 @@ Courgette-JVM:
     
 Key Features:
 •	All features can be executed in parallel on independent threads in case of no dependencies.
+
 •	All scenarios can be executed in parallel on independent threads (except dependencies)
+
 •	Automatic re-run of failed scenarios.
+
 •	Require only 1 annotated class to run all feature files in parallel.
+
 •	Single report generation for all executed features including embedded files (Json and Html reports)
+
 •	Single re-run listing all failed scenarios that occurred during parallel execution.
+
 •	Integrate with Report Portal to support AI powered dashboards.
+
 •	Searchable and paginated Courgette-JVM Html Report which includes all step definitions, embedded screenshots, thrown exceptions, pie chart and Courgette run information.
 
 Execution Instruction:
